@@ -1,5 +1,6 @@
 import unittest
-from health_stats_calculator import calculate_bmi, calculate_bmr, calculate_max_heart_rate, assess_resting_heart_rate, get_expected_resting_heart_rate_range
+from health_stats_calculator import *
+
 
 class HealthStatsCalculatorTest(unittest.TestCase):
     def test_calculate_bmi(self):
@@ -27,5 +28,14 @@ class HealthStatsCalculatorTest(unittest.TestCase):
         self.assertEqual(get_expected_resting_heart_rate_range(40), (65, 85))
         # Add more test cases for different inputs
 
-if __name__ == '__main__':
+    def test_classify_hypertension(self):
+        self.assertEqual(classify_hypertension(130, 85), 'Stage 1 Hypertension')
+        # Add more test cases for different inputs
+
+    def test_calculate_max_aspartame_bottle(self):
+        self.assertEqual(calculate_max_aspartame_bottle(70, 250), 11)
+        # Add more test cases for different inputs
+
+
+if __name__ == "__main__":
     unittest.main()

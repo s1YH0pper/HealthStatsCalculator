@@ -1,3 +1,25 @@
+"""
+This is the main module of the Health Stats Calculator project. It provides functions to calculate various health indicators such as BMI, BMR, maximum heart rate, and more. The calculations are based on established formulas and guidelines from reputable sources.
+
+Usage:
+- Import this module into your Python script or interactive session.
+- Call the respective functions to calculate the desired health indicators by providing the required input parameters.
+- The calculated values can be used for health assessments, monitoring, or further analysis.
+
+Dependencies:
+- This module depends on other modules such as numpy and pandas for certain calculations. Make sure to install the required dependencies before using this module.
+
+Author:
+- s1YH0pper siyhopper.119@outlook.com
+
+License:
+- This project is licensed under the MIT License. See the 'LICENSE' file for more information.
+
+For more details and examples, refer to the README.md file.
+
+"""
+
+
 def calculate_bmi(weight: float, height: float) -> float:
     """
     Calculate the Body Mass Index (BMI) based on weight and height.

@@ -154,5 +154,65 @@ def get_expected_resting_heart_rate_range(age: int) -> tuple:
 
     return expected_range
 
-if __name__=="__main__":
+
+def classify_hypertension(systolic_pressure, diastolic_pressure):
+    """
+    Classify hypertension based on systolic and diastolic blood pressure values.
+
+    Parameters:
+    - systolic_pressure (int): Systolic blood pressure value.
+    - diastolic_pressure (int): Diastolic blood pressure value.
+
+    Returns:
+    - str: Hypertension classification.
+
+    Notes:
+    - The classification is based on the latest blood pressure category guidelines.
+    - The classification may vary depending on specific guidelines and practices.
+
+    Example:
+    >>> classify_hypertension(130, 85)
+    'Stage 1 Hypertension'
+    """
+    if systolic_pressure < 120 and diastolic_pressure < 80:
+        return "Normal Blood Pressure"
+    elif systolic_pressure < 130 and diastolic_pressure < 80:
+        return "Elevated Blood Pressure"
+    elif 130 <= systolic_pressure <= 139 or 80 <= diastolic_pressure <= 89:
+        return "Stage 1 Hypertension"
+    elif systolic_pressure >= 140 or diastolic_pressure >= 90:
+        return "Stage 2 Hypertension"
+    elif systolic_pressure >= 180 or diastolic_pressure >= 120:
+        return "Hypertensive Crisis"
+    else:
+        return "Unclassified"
+
+
+def calculate_max_aspartame_bottle(weight, aspartame_content):
+    """
+    Calculate the maximum number of bottles a person can consume based on weight and the aspartame content in the drink.
+
+    Parameters:
+    - weight (float): Weight of the person in kilograms.
+    - aspartame_content (float): Aspartame content in milligrams in a single bottle of the drink.
+
+    Returns:
+    - int: Maximum number of bottles that can be consumed in a day.
+
+    Notes:
+    - The calculation assumes that the maximum daily intake of aspartame is 40mg/kg of body weight.
+    - The aspartame content should be provided in milligrams (mg).
+    - The weight should be provided in kilograms (kg).
+    - The result is rounded down to the nearest whole number.
+
+    Example:
+    >>> calculate_max_aspartame_bottle(70, 250)
+    18
+    """
+    max_aspartame_intake = 40 * weight
+    max_bottles = max_aspartame_intake // aspartame_content
+    return max_bottles
+
+
+if __name__ == "__main__":
     pass

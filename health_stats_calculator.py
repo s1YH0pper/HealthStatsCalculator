@@ -207,7 +207,7 @@ def calculate_max_aspartame_bottle(weight, aspartame_content):
 
     Example:
     >>> calculate_max_aspartame_bottle(70, 250)
-    18
+    11
     """
     max_aspartame_intake = 40 * weight
     max_bottles = max_aspartame_intake // aspartame_content

@@ -210,6 +210,47 @@ def classify_hypertension(systolic_pressure, diastolic_pressure):
         return "Unclassified"
 
 
+def calculate_body_fat_percentage(gender, weight, height, age):
+    """
+    Calculate the body fat percentage based on gender, weight, height, and age.
+
+    Parameters:
+    - gender (str): Gender, can be 'M' for male or 'F' for female.
+    - weight (float): Weight in kilograms.
+    - height (float): Height in meters.
+    - age (int): Age in years.
+
+    Returns:
+    - body_fat_percentage (float): Body fat percentage.
+
+    Notes:
+    - The calculation of body fat percentage may vary depending on the formula or combination of formulas used.
+    - The provided gender should be 'M' for male or 'F' for female.
+    - The weight should be provided in kilograms.
+    - The height should be provided in meters.
+
+    Example usage:
+    >>> calculate_body_fat_percentage('M', 70, 1.75, 30)
+    15.2
+    >>> calculate_body_fat_percentage('F', 60, 1.6, 35)
+    25.7
+    """
+    if gender == "M":
+        body_fat_percentage = (
+            (1.20 * calculate_bmi(weight, height)) + (0.23 * age) - 16.2
+        )
+    elif gender == "F":
+        body_fat_percentage = (
+            (1.20 * calculate_bmi(weight, height)) + (0.23 * age) - 5.4
+        )
+    else:
+        raise ValueError(
+            "Invalid gender input. Please enter 'M' for male or 'F' for female."
+        )
+
+    return body_fat_percentage
+
+
 def calculate_max_aspartame_bottle(weight, aspartame_content):
     """
     Calculate the maximum number of bottles a person can consume based on weight and the aspartame content in the drink.

@@ -10,10 +10,10 @@ Dependencies:
 - This module depends on other modules such as numpy and pandas for certain calculations. Make sure to install the required dependencies before using this module.
 
 Author:
-- s1YH0pper siyhopper.119@outlook.com
+- s1YH0pper <siyhopper.119@outlook.com>
 
 License:
-- This project is licensed under the MIT License. See the 'LICENSE' file for more information.
+- This project is licensed under the GNU General Public License. See the 'LICENSE' file for more information.
 
 For more details and examples, refer to the README.md file.
 

@@ -36,6 +36,11 @@ class HealthStatsCalculatorTest(unittest.TestCase):
         self.assertEqual(calculate_max_aspartame_bottle(70, 250), 11)
         # Add more test cases for different inputs
 
+    def test_calculate_body_fat_percentage(self):
+        self.assertAlmostEqual(calculate_body_fat_percentage('M', 70, 1.75, 30), 18.13, places=2)
+        self.assertAlmostEqual(calculate_body_fat_percentage('F', 60, 1.6, 35), 30.77, places=2)
+        # Add more test cases for different inputs
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -11,3 +11,18 @@ The design philosophy of HealthStatsCalculator focuses on simplicity and usabili
 HealthStatsCalculator is released under an open-source license, encouraging developers to contribute and improve the project. Users have the flexibility to customize and expand the functionality according to their needs and interests, making HealthStatsCalculator a versatile health statistics calculation tool suitable for various scenarios and requirements.
 
 Through HealthStatsCalculator, our goal is to provide a convenient and powerful tool that enables users to gain better insights into their health and promote the adoption and maintenance of a healthy lifestyle.
+
+# Features
+
+- BMI calculation
+- BMR (Basal Metabolic Rate) calculation
+- Maximum heart rate calculation
+- Resting heart rate assessment
+- Hypertension classification
+- Body fat percentage calculation
+- Daily maximum aspartame intake
+
+# TODO
+
+- [ ] CLI interaction
+- [ ] GUI interaction
